@@ -1,0 +1,146 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.App {
+  width: 70%;
+  margin:50px auto;
+}
+.form__group{
+  width: 100%;
+  display: flex;
+  padding:12px;
+  justify-content: space-between;
+}
+.form__group-input{
+  width: 80%;
+  font-size: 16px;
+  color:#546e7a;
+  padding:8px;
+  border: none;
+  border-bottom: 2px solid #bdbdbd;
+}
+.form__group-input:focus{
+  border-color: #1e88e5;
+}
+.form__group-input:focus { outline: none;}
+
+.form__group-button{
+  font-size: 16px;
+  padding:8px 12px;
+  background-image: linear-gradient(115deg, #1e88e5, #2196f3, #1e88e5);
+  color: white;
+  border:none;
+  border-radius: 3px;
+     text-transform: uppercase;
+}
+.form__group-button:hover { cursor: pointer;}
+.form__group-button:focus { outline:none}
+
+.todo-list{
+  width: 100%;
+  margin-top: 40px;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .25);
+  min-height: 350px;
+}
+.todo-item{
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  padding:12px;
+  font-size: 18px;
+  border-bottom:1px solid #EEE;
+  color:#78909c;
+}
+.todo-item-value{
+  max-width: 60%;
+  text-align: justify;
+}
+.todo-list-heading{
+  display: flex;
+  align-items: center;
+  min-height: 60px;
+  padding:0 8px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+}
+.button__group{
+  padding:6px;
+}
+.button__group-edit {
+  font-size: 18px;
+  padding:6px 18px;
+  background-color: #ffb300;
+  color: white;
+  margin-right: 12px;
+}
+.button__group-delete {
+  font-size: 18px;
+  padding: 6px 18px;
+  background-color: red;
+  color: white;
+}
+.button__group-edit:hover { cursor: pointer;}
+.button__group-delete:hover { cursor: pointer;}
+.empty{
+  font-size: 40px;
+  margin: 24px auto;
+  opacity: .3;
+  text-align: center;
+}
+
+.error{
+  
+  padding:0 16px;
+  color: red;
+  font-size: 14px;
+}
+
+@media screen and (max-width: 720px) {
+.App {
+  width: 95%;
+}
+.form__group-input{
+  width: 70%;
+}
+}
+
+.edit__todo{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.edit__todo .form__group{
+  width: 350px;
+  height: 110px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 12px;
+  background-color: white;
+  transition: all 1s ease-in-out;
+}
+
+.edit__todo .form__group-input{
+  width: 100%;
+  margin-bottom: 16px;
+}
+.edit__todo .form__group-input:focus{
+  border-bottom-color: #ffa000;
+
+}
+
+.edit__todo .form__group-button{
+   background-image: linear-gradient(115deg, #ffa000, #ffb300, #ffa000);
+   letter-spacing: .5px;
+
+}
